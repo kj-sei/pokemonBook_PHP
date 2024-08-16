@@ -1,0 +1,288 @@
+/* Googleフォント */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700;900&family=Noto+Sans+JP:wght@800&family=Noto+Serif+JP:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700;900&family=Noto+Sans+JP:wght@800&family=Noto+Serif+JP:wght@700&display=swap');
+
+
+/* 背景色 */
+body {
+  background-color: #fff;
+  background-image:
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+  margin: 0;
+  padding: 0;
+  }
+header{
+  /* background-color: rgb(184, 18, 18); */
+  /* background:linear-gradient(90deg,#CCCC00	0%,#CCCC00	 25%,darkred 25%,darkred 100%); */
+  /* background:linear-gradient(90deg,#88c8b0 0%,#88c8b0 50%,#90c686 50%,#90c686 100%); */
+  background: #88c8b0;
+  width: 100%;
+  height:100px;
+  position: relative;
+  padding: 20px;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Serif JP', serif;
+}
+/* フレックスボックス */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.paging {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.l-wrapper_02 {
+  width: 380px;
+}
+
+.card-radius_02 {
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+}
+
+.card_02 {
+  box-shadow: 0 0 0px rgba(0, 0, 0, .16);
+  border: 1px solid black;
+  color: #212121;
+  text-decoration: none;
+  height: 540px;
+  padding: 0;
+}
+
+.card_02_front {
+  background-color: silver;
+  color: white;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.card_02_back {
+  background-color: rgb(147, 130, 32);
+  color: white;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.card__header_02 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card__title_02 {
+  padding: 0rem 1.5rem 0;
+  font-size: 1.6rem;
+  order: 1;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: solid 4px white;
+}
+
+.card__thumbnail_02 {
+  margin: 0;
+  width: 380px;
+  text-align: center;
+}
+
+.card__thumbnail_02_front {
+  background-color: azure;
+}
+
+.card__thumbnail_02_back {
+  background-color: beige;
+}
+
+.image_size {
+  width: 200px;
+  height: 200px;
+}
+
+.card__image_02 {
+  width: 100%;
+}
+
+.card__body_02 {
+  padding: 0 1.5rem;
+}
+
+.card__text_02 {
+  font-size: .8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card__text2_02 {
+  font-size: .8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+
+
+/* カード本体 */
+.card {
+  width: 380px;
+  /* 任意の横幅を指定 */
+  height: auto;
+  margin: 20px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+/* 擬似要素とpadding-topでカードの高さを指定 */
+.card::before {
+  content: "";
+  display: block;
+  padding-top: 142.5%;
+}
+
+/* カード内の画像 */
+
+/* カード裏面・表面の共通スタイル */
+.card .back,
+.card .front {
+  transition: all 0.6s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* カード表面のスタイル */
+.card .front {
+  transform: rotateY(-180deg);
+}
+
+/* ホバー時のカード裏面 */
+.card:hover .back {
+  transform: rotateY(180deg);
+}
+
+/* ホバー時のカード表面 */
+.card:hover .front {
+  transform: rotateY(0);
+}
+/* 現在のボタン */
+.now_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  background: yellow;
+  color: red;
+  cursor: pointer;
+
+}
+/* それ以外のボタン */
+.other_btn {
+  /* background: rgb(231, 248, 253);
+  cursor: pointer; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+.other_btn:hover {
+  background: linear-gradient(red 46%, black 46%, black 54%, white 54%);
+}
+/* セレクトボックス */
+select,
+option {
+  position: relative;
+  border: black 2px inset;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* モンスターボール */
+.base {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: -20px -10px 40px rgba(0, 0, 0, .5) inset;
+  background:linear-gradient(red 46%,black 46%,black 54%,  white 54%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+
+.center {
+  border-radius: 50%;
+  border: 7px solid black;
+  height: 25%;
+  width: 25%;
+  background-color: #f5f5f5;
+  display: grid;
+  place-items: center;
+  animation: rotate-anim 6s linear infinite;
+}
+
+@keyframes rotate-anim {
+  0% {
+    translate: -100px;
+    scale: 70% 100%;
+  }
+  25% {
+    scale: 100% 100%;
+  }
+  50% {
+    translate: 100px;
+    scale: 70% 100%;
+  }
+  100% {
+    translate: 100px;
+    scale: 70% 100%;
+  }
+}
+
+.center-button {
+  border-radius: 50%;
+  border: none;
+  display: block;
+  height: 20px;
+  width: 20px;
+  box-shadow:
+    2px 2px 4px rgba(0,0,0,0.2),
+    -3px -3px 4px rgba(255,255,255,0.2);
+  background-color: #ffffff;
+}
+
+.center-button:active {
+  box-shadow:
+    inset 2px 2px 3px rgba(0,0,0,0.2),
+    inset -3px -3px 3px rgba(255,255,255,0.2);
+}
